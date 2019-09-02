@@ -51,7 +51,12 @@
 
                 <button v-else class="btn new-game" @click="startGame">Iniciar Jogo</button>
             </div>
-            <div v-if="logs.length" class="panel logs"></div>
+
+            <div v-if="logs.length" class="panel logs">
+                <ul>
+                    <li class="log" v-for="log in logs" :class="log.cls">{{ log.text }}</li>
+                </ul>
+            </div>
         </div>
 
         <script src="node_modules/vue/dist/vue.js"></script>
