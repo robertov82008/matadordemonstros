@@ -51,7 +51,7 @@
 
                 <button v-else class="btn new-game" @click="startGame">Iniciar Jogo</button>
             </div>
-            <div class="panel logs"></div>
+            <div v-if="logs.length" class="panel logs"></div>
         </div>
 
         <script src="node_modules/vue/dist/vue.js"></script>
